@@ -1,0 +1,676 @@
+/* Fichier de style du Projet sur la serie BM(Black Mirror), realisé en binome evec Andre Dos Reis Pires */
+
+/* Importation d'une police tierce */
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("HelveticaNeue-Thin.otf");
+}
+
+/* Couleurs recurrentes dans la page */
+
+:root {
+    --light: #DEE4E7;
+    /* --dark: #37474F; */
+    --dark: #222233;
+    --black: #222222;
+    --blue: #0071BC;
+    --bluer: #0067C5;
+    --grey: rgb(97, 98, 99);
+    --gray: rgb(204, 201, 201);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--dark);
+    overflow-y: scroll;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* Entete compose du logo et du titre de la page */
+
+header {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 16vh;
+    /* Affichage sous forme de grille */
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* Titre de l'episode */
+
+header h2 {
+    font-size: 1rem;
+    color: var(--light);
+    grid-column: 2/5;
+    grid-row: 1/4;
+    justify-self: center;
+}
+
+/* Lien vers la page d'accueil/ Se superpose au logo BM  */
+
+header a {
+    display: block;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Logo BM de la page d'accueil */
+
+#main-page-logo {
+    grid-column: 2/4;
+    grid-row: 1/4;
+    height: 100%;
+    /* background-color: green; */
+    /* */
+    align-self: center;
+    justify-self: center;
+}
+
+/* Logo Black Mirror/ Mene a la page d'accueil*/
+
+#sub-logo {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Liste des episodes de la saison3 */
+
+#ep_list {
+    text-align: center;
+}
+
+/* Menu de navigation sous forme de grille  */
+
+#main-menu {
+    width: 100%;
+    /* height: 50px; */
+}
+
+/* Conteneur des elements du menu sous forme de  Liste */
+
+#main-menu-elements {
+    padding: 0;
+    margin: 0px;
+    width: 100%;
+    height: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    /* Nomination de chaque case de la grille */
+    grid-template-areas: "eps1 eps2 eps3 eps4";
+    justify-items: center;
+    align-items: center;
+}
+
+/* Element du menu(episode) */
+
+.nav-episode {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    cursor: wait;
+}
+
+#season-tres {
+    color: var(--black);
+}
+
+/* Lien des elements du menu */
+
+.nav-episode a {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-decoration: none;
+    cursor: default;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 2px;
+    border-radius: 3px;
+    /* background-color: var(--dark); */
+    color: var(--light);
+    border: 1px solid var(--dark);
+    text-shadow: 0px 2px 1px var(--dark);
+    /* Centrer le lien au centre de l'image */
+    top: 50%;
+    left: 50%;
+    position: relative;
+    text-align: center;
+    transition: all 300ms linear;
+    transform: translate(-50%, -50%);
+}
+
+/* Fait disparaitre le lien afin d'eviter un problème d'evenement */
+.nav-episode:hover > a{
+    transform-origin: center;
+    /* transform: scale(0.1) translate(-100%,-100%); */
+    /* display: none; */
+}
+/* Sous-ligne du lien/ Invisible de base grace a Scale*/
+
+.nav-episode a:before {
+    content: "";
+    position: absolute;
+    background-color: var(--light);
+    width: 100%;
+    height: 2px;
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 1000ms ease-in-out 0s;
+}
+
+/* Sous-ligne du lien/ Devient visible en hover*/
+
+li.nav-episode#ep1:hover a::before,
+li.nav-episode#ep2:hover a::before,
+li.nav-episode#ep3:hover a::before,
+li.nav-episode#ep4:hover a::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Element du menu */
+
+#ep1 {
+    overflow: hidden;
+    position: relative;
+    grid-area: eps1;
+}
+
+#ep2 {
+    overflow: hidden;
+    position: relative;
+    grid-area: eps2;
+}
+
+#ep3 {
+    overflow: hidden;
+    position: relative;
+    grid-area: eps3;
+}
+
+#ep4 {
+    overflow: hidden;
+    position: relative;
+    grid-area: eps4;
+}
+
+/* Images de chaque elemnt du menu */
+
+#ep1::before {
+    background: url("Images/bmep1.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    background-clip: content-box;
+    transform-origin: center;
+}
+
+#ep2::before {
+    background: url("Images/bmep2.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    background-clip: content-box;
+    transform-origin: center;
+}
+
+#ep3::before {
+    background: url("Images/bmep3-2.png") no-repeat 50% 50%;
+    background-size: cover;
+    background-clip: content-box;
+    transform-origin: top center;
+}
+
+#ep4::before {
+    background: url("Images/bmep4.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    background-clip: content-box;
+    transform-origin: top center;
+}
+
+#ep1::before,
+#ep2::before,
+#ep3::before,
+#ep4::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    transition: all 1000ms ease-in-out;
+}
+
+/* Changement de l'image par hover  */
+
+#ep1:hover::before {
+    transform: scale(1.1);
+    background-image: url("Images/bmep1-2.png");
+}
+
+#ep2:hover::before {
+    transform: scale(1.1);
+    background-image: url("Images/bmep2-2.jpeg");
+}
+
+#ep3:hover::before {
+    transform: scale(1.1);
+    background-image: url("Images/bmep3-2.jpg");
+}
+
+#ep4:hover::before {
+    transform: scale(1.1);
+    background-image: url("Images/bmep4-2.jpg");
+}
+
+/* Reduction de l'opacite de l'element si actif */
+
+#ep1:active::before,
+#ep2:active::before,
+#ep3:active::before,
+#ep4:active::before {
+    opacity: 1;
+}
+
+/* Permet de choisir le mode comparateur??????? */
+#compare_check{
+    position: sticky;
+    color: var(--black);
+    cursor: progress;
+    background-color: var(--light);
+    border-radius:0px 0px 0px 0px;
+    text-align: center;
+    top: 0;
+    display: inline-block;
+    opacity: 0.2;
+    width: 200px;
+    height: 20px;
+    transition: all 1000ms linear;
+}
+#compare_check:hover{
+    opacity: 1;
+    border-radius:0px 0px 30px 30px;
+}
+/*  Même chose que comparateur mais réinitialise la comparaison*/
+#reinitialise{
+    position: sticky;
+    color: var(--black);
+    cursor: progress;
+    background-color: var(--light);
+    border-radius:0px 0px 0px 0px;
+    text-align: center;
+    top:0;
+    display: inline-block;
+    left: 100%;
+    opacity: 0.2;
+    width: 200px;
+    height: 20px;
+    transition: all 1000ms linear;
+}
+#reinitialise:hover{
+    opacity: 1;
+    border-radius:0px 0px 30px 30px;
+}
+
+.current-episode {
+    opacity: 0.5;
+}
+
+/* Partie production */
+
+.production {
+    background-color: initial;
+}
+
+/* Grille d'acteurs */
+
+#casting_grid {
+    display: grid;
+    width: 100%;
+    margin: 10px auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+.cast {
+    grid-column: auto;
+    margin: 10px;
+    align-self: center;
+}
+
+.cast a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cast h5 {
+    text-align: center;
+}
+
+/* Style de chaque image */
+
+.cast img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 20% 0%;
+}
+
+/* Parties critiques */
+
+.polls {
+    background-color: initial;
+}
+
+/* Avis de popularite */
+
+.critics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.critics h3 {
+    text-align: center;
+}
+
+.links a {
+    text-decoration: none;
+    padding: 3px;
+    color: var(--light);
+    border-radius: 3px;
+    text-align: center;
+    background-color: var(--dark);
+}
+
+/* Video de trailer/extrait */
+
+iframe {
+    margin: 20px auto;
+    display: block;
+    padding: 30px;
+    width: 560px;
+    height: 315px;
+    background-color: black;
+    border-radius: 30px;
+    box-shadow: 0px 10px 6px var(--black);
+    transform-origin: center;
+}
+
+/* Comparateur */
+
+#comparator {
+    display: grid;
+    min-height: 600px;
+    
+    /* add a third column for details */
+    grid-template-columns:1fr 2fr 2fr;
+    /* grid-template-rows:  ; */
+    /* grid-template-rows: minmax(100px, auto); */
+    transition: all 1000ms;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    /* padding-bottom: 20px; */
+    grid-template-areas: "title name1 name2"
+                        "synop synop1 synop2"
+                        "direct direct1 direct2"
+                        "writtor writtor1 writtor2"
+                        "rating ratings1 ratings2";
+}
+
+
+
+.comparator_cell {
+    text-align: center;
+    transition: all 300ms;
+    display: grid;
+    align-items: center;
+}
+
+.comparator_cell:nth-child(3n) {
+    background-color: var(--gray);
+    color: var(--dark);
+    height: 100%;
+}
+.comparator_cell:nth-child(3n+1) {
+    background-color: var(--black);
+    color: var(--light);
+    height: 100%;
+}
+.comparator_cell:nth-child(3n+2) {
+    background-color: var(--grey);
+    color: var(--light);
+    height: 100%;
+}
+/* Capitalize comparator categories and first one
+.comparator_cell:first-child,.comparator_cell:nth-child(n+3) {
+    text-transform: capitalize;
+} */
+/* Conteneur basique */
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 3px;
+    padding: 10px 10px;
+    background-color: var(--light);
+    /* box-shadow: 0px 17px 10px -10px var(--light); */
+    /* transition: all 600ms; */
+    /* TODO take off the animation */
+    box-shadow: 0px 2px 4px var(--black);
+}
+
+/* Titre de conteneur */
+
+.container h1 {
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+/* Citation de conteneur */
+
+.container blockquote {
+    font-style: italic;
+    border-left: 5px solid var(--dark);
+    width: 80%;
+    text-align: center;
+    margin: 50px auto;
+    padding: 10px;
+    line-height: 1.5rem;
+}
+
+/* Auteur de citation dans un conteneur */
+
+.container blockquote span {
+    color: black;
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    position: relative;
+    bottom: 0px;
+}
+
+/* Paragraphe dans un conteneur */
+
+.container p {
+    font-size: 0.8rem;
+    line-height: calc(0.8rem*1.5);
+    text-align: center;
+    color: var(--dark);
+}
+
+/* Titre de la serie (Black Mirror) */
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Pied de page */
+
+footer {
+    position: relative;
+    height: 10vh;
+
+    bottom: 0;
+    width: 100%;
+    background-color: var(--light);
+    display: grid;
+    margin-top: 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+footer p {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    color: var(--dark);
+  
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ligne horizontale perso */
+
+hr {
+    border-bottom: 2px dotted var(--dark);
+    width: 70%;
+    margin: auto;
+    border-top-width: 0;
+    color: transparent;
+}
+
+/* Modification a faire en fonction de la largeur de l'ecran */
+
+@media screen and (min-width:150px) {
+    .nav-episode a {
+        font-size: 0.8rem;
+    }
+    .container p,
+    li,
+    blockquote {
+        font-size: 0.7rem;
+    }
+    .container h1 {
+        font-size: 1rem;
+    }
+    iframe {
+        width: 90px;
+        height: 52px;
+    }
+    header h2,
+    h3 {
+        font-size: 0.6rem;
+    }
+    footer p {
+        font-size: 0.5rem;
+    }
+    /* #main-menu {
+        width: 100%;
+        height: 50vh;
+    } */
+}
+
+@media screen and (min-width:300px) {
+    .nav-episode a {
+        font-size: 1rem;
+    }
+    .container p,
+    li,
+    blockquote {
+        font-size: 0.8rem;
+    }
+    iframe {
+        width: 186px;
+        height: 105px;
+    }
+    .container h1 {
+        font-size: 1.2rem;
+    }
+    header h2,
+    h3 {
+        font-size: 0.8rem;
+    }
+    footer p {
+        font-size: 0.6rem;
+    }
+    /* #main-menu {
+        width: 100%;
+        height: 60vh;
+    } */
+}
+
+@media screen and (min-width:600px) {
+    .nav-episode a {
+        font-size: 1.3rem;
+    }
+    .container p,
+    li,
+    blockquote {
+        font-size: 0.9rem;
+    }
+    iframe {
+        width: 372px;
+        height: 210px;
+    }
+    .container h1 {
+        font-size: 1.4rem;
+    }
+    header h2,
+    h3 {
+        font-size: 1.3rem;
+    }
+    footer p {
+        font-size: 0.7rem;
+    }
+    /* #main-menu {
+        width: 100%;
+        height: 70vh;
+    } */
+}
+
+@media screen and (min-width:900px) {
+    .nav-episode a {
+        font-size: 1.6rem;
+    }
+    .container p,
+    li,
+    blockquote {
+        font-size: 1rem;
+    }
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+    .container h1 {
+        font-size: 1.6rem;
+    }
+    header h2,
+    h3 {
+        font-size: 1.5rem;
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+    /* #main-menu {
+        width: 100%;
+        height: 84vh;
+    } */
+}

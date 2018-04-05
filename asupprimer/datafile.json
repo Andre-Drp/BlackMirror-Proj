@@ -1,0 +1,129 @@
+{
+    "project": [{
+            "name": "Nana Yannick"
+        },
+        {
+            "name": "Andre Dos Reis Pires"
+        }
+    ],
+
+    "season3": [{
+        "title": "Black Mirror",
+        "synopsis": "D'après Charlie Brooker, chaque épisode a un casting, un décor et une réalité différente, mais ils traitent de la façon dont nous vivons maintenant et de la façon dont nous pourrions vivre dans dix minutes si nous commettions une erreur.",
+        "network": "Netflix",
+        "genre": "Science Fiction & Fantasie",
+        "parution": "October 2016",
+        "episodes": [{
+                "title": "Chute Libre",
+                "synopsis": "Pour une femme obsédée par sa notoriété sur les médias sociaux, se faire inviter à un mariage huppé représente une aubaine inespérée. Mais c'était compter sans le voyage.",
+                "director": "Joe Wright, Carl Tibbetts",
+                "writtor": "Michael Schur, Rashida Jones, Charlie Brooker",
+                "casting": [{
+                    "name": "Rafe Spall"
+                }, {
+                    "name": "James Norton"
+                }, {
+                    "name": "Jon Hamm"
+                }, {
+                    "name": "Cherry Jones"
+                }, {
+                    "name": "Alice Eve"
+                }],
+                "critics": [{
+                    "name": "Wenlei Ma News.com.au",
+                    "comments": " Bryce Dallas Howard is perfect as the pink-clad, sing-song Lacie, who only shows flashes of her real self occasionally."
+                }, {
+                    "name": "Alison Willmore BuzzFeed News",
+                    "comments": "Like all the best Black Mirrors, this is just a few short steps from current reality. It's not one of the best, though. It    sets up the premise crisply, then spends far too much time labouring the point. "
+                }],
+                "ratings": " &#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9734;&#9734;&#9734;&#9734;"
+            },
+            {
+                "title": "Playtest",
+                "synopsis": "Un voyageur américain fauché s'engage à tester un nouveau système de jeu révolutionnaire, avant de découvrir que les sensations sont un peu trop réelles.",
+                "director": "Dan Trachtenberg",
+                "writtor": "Charlie Brooker",
+                "casting": [{
+                        "name": "Wyatt Russell"
+                    }, {
+                        "name": "Hannah John-Kamen"
+                    },
+                    {
+                        "name": "Wunmi Mosaku"
+                    },
+                    {
+                        "name": "Ken Yamamura"
+                    }
+                ],
+                "critics": [{
+                    "name": "Pat Stacey The Herald (Ireland)",
+                    "comments": "It's basically Black Mirror's take on a haunted house story. "
+                }, {
+                    "name": "Suchandrika Chakrabarti Daily Mirror(UK)",
+                    "comments": "... in typical Black Mirror style, all the evident glee in the technology is just a device for getting to the root of relationships and the emotions they provoke. "
+                }],
+                "ratings": " &#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9734;&#9734;&#9734;&#9734;"
+            },
+            {
+                "title": "Tuer sans etat d'ame",
+                "synopsis": "Après sa première bataille contre un ennemi insaisissable, un soldat commence à éprouver des sensations inhabituelles et à rencontrer d'étranges problèmes techniques.",
+                "director": "Jakob Verbruggen",
+                "writtor": "Charlie Brooker",
+                "casting": [{
+                        "name": "Malachi Kirby"
+                    }, {
+                        "name": "Madeline Brewer"
+                    },
+                    {
+                        "name": "Michael Kelly"
+                    },
+                    {
+                        "name": "Sarah Snook"
+                    }
+                ],
+                "critics": [{
+                    "name": "Yannick Nana",
+                    "comments": "Add smthg "
+                }, {
+                    "name": "Daily Mirror(UK)",
+                    "comments": "... it's an episode that rewards knowledge of earlier Black Mirror episodes, and forces you to think about the philosophical consequences of high-tech warfare. "
+                }],
+                "ratings": " &#9733;&#9733;&#9733;&#9733;&#9733;&#9733;&#9734;&#9734;&#9734;&#9734;"
+            },
+            {
+                "title": "Haine Virtuelle",
+                "synopsis": "La mort d'une journaliste provocatrice haïe sur les réseaux sociaux conduit une enquêtrice aguerrie et sa stagiaire férue de technologie à une découverte glaçante.",
+                "director": "",
+                "writtor": "",
+                "casting": [{
+                    "name": "Kelly Macdonald"
+                }, {
+                    "name": "Faye Marsay"
+                }],
+                "critics": [{
+                    "name": "Suchandrika Chakrabarti Daily Mirror(UK)",
+                    "comments": "This 90-minute finale to the Black Mirror on Netflix series is a huge achievement. "
+                }, {
+                    "name": "Yannick Nana",
+                    "comments": "Add smthg "
+                }],
+                "ratings": [{
+                    "from": "Imdb",
+                    "stars": ""
+                }, {
+                    "from": "Daily Mirror(UK) ",
+                    "stars": ""
+                }]
+            }, {
+                "title": "Tais-toi et danse (Shut Up and Dance)"
+            }, {
+                "title": "San Junipero (San Junipero)"
+            }
+        ]
+    }]
+
+
+
+
+
+}
